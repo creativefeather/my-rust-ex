@@ -1,0 +1,25 @@
+{
+  "name": "jsapi-wasm",
+  "version": "0.1.0",
+  "description": "trying out the Wasm JavaScript API",
+  "main": "index.js",
+  "scripts": {
+    "build:wasm": "wasm-pack build wasm/",
+    "__postbuild:wasm": "copyfiles --flat wasm/pkg/wasm_bg.wasm dist",
+    "prebuild": "npm run build:wasm",
+    "build": "webpack --config webpack.config.js",
+    "start": "npm run build && webpack-dev-server"
+  },
+  "keywords": [
+    "wasm",
+    "rust",
+    "javascript",
+    "api"
+  ],
+  "author": "creativefeather <creativefeather@outlook.com>",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "wasm": "file:../wasm/pkg"
+  }
+}

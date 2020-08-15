@@ -1,0 +1,25 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "build:wasm": "wasm-pack build wasm/",
+    "prebuild": "npm run build:wasm",
+    "build": "webpack --config www/webpack.config.js --context www",
+    "dev": "webpack-dev-server --config www/webpack.config.js --context www",
+    "start": "npm run build:wasm && npm run dev"
+  },
+  "devDependencies": {
+    "@types/webassembly-web-api": "~0.0.2",
+    "copy-webpack-plugin": "^5.0.0",
+    "copyfiles": "^2.1.1",
+    "lerna": "^3.20.2",
+    "ts-loader": "^6.2.1",
+    "typescript": "~3.7.4",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "dependencies": {
+    "jsapi-wasm": "file:www"
+  }
+}
