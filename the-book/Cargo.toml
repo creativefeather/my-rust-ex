@@ -1,0 +1,59 @@
+[package]
+name = "book-examples"
+version = "0.1.0"
+authors = ["creativefeather <creativefeather@outlook.com>"]
+edition = "2018"
+publish = false
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rand = "0.7.3"
+
+[[example]]
+name = "helloworld"
+path = "src/helloworld.rs"
+
+[[example]]
+name = "variables"
+path = "src/variables.rs"
+
+[[example]]
+name = "data-types"
+path = "src/data-types.rs"
+
+[[example]]
+name = "functions"
+path = "src/functions.rs"
+
+[[example]]
+name = "loops"
+path = "src/loops.rs"
+
+[[example]]
+name = "ownership"
+path = "src/ownership.rs"
+
+[[example]]
+name = "guessing_game"
+path = "src/guessing_game.rs"
+
+[[example]]
+name = "structs"
+path = "src/structs.rs"
+
+[[example]]
+name = "enums"
+path = "src/enums.rs"
+
+[[example]]
+name = "common_collections"
+path = "src/common_collections.rs"
+
+[[example]]
+name = "expressions"
+path = "src/expressions.rs"
+
+[[example]]
+name = "generics"
+path = "src/generics.rs"
